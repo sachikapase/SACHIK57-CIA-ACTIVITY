@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Achievements</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    overflow-x: hidden;
+}
+
+/* BACKGROUND SAME AS MAIN PAGE */
+.bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite;
+    z-index: -2;
+}
+
+.particles {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.3) 2px, transparent 2px);
+    background-size: 70px 70px;
+    opacity: 0.4;
+    animation: starMove 12s linear infinite;
+    z-index: -1;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes starMove {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-200px); }
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.5);
+    color: blue;
+}
+
+/* PAGE TITLE */
+.title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+/* GRID (Card Layout like Activities Page) */
+.achievements-grid {
+    max-width: 800px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+.achievement-card {
+    background: rgba(255,255,255,0.45);
+    backdrop-filter: blur(18px);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.3s;
+    border: 2px solid rgba(255,255,255,0.4);
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+}
+
+.achievement-card img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.achievement-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.achievement-card p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 18px;
+    background: white;
+    color: #07077a;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e6e6e6;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+<div class="bg"></div>
+<div class="particles"></div>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="activities.html">Activities</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<!-- TITLE -->
+<div class="title">Achievements</div>
+
+<!-- ACHIEVEMENTS GRID -->
+<div class="achievements-grid">
+
+    <!-- NSS ACHIEVEMENT CARD -->
+    <div class="achievement-card">
+        <img src="nss_certificate.jpg" alt="NSS Certificate">
+
+        <h3>NSS:Best From Waste Competition</h3>
+
+        <p>
+            Awarded for creativity and contribution in the 
+            <strong>Best From Waste</strong> competition under the NSS program.
+        </p>
+
+        <a href="nss_certificate.pdf" class="btn" target="_blank">View Certificate</a>
+    </div>
+
+</div>
+
+</body>
+</html>

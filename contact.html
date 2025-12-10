@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    color:black;
+}
+
+/* Background */
+.bg{
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:radial-gradient(circle,rgba(238,174,202,1),rgba(148,187,233,1));
+    z-index:-2;
+}
+
+.particles{
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background-image:radial-gradient(circle,rgba(255,255,255,.3) 2px,transparent 2px);
+    background-size:70px 70px;
+    opacity:.4;
+    z-index:-1;
+    animation:starMove 12s linear infinite;
+}
+
+@keyframes starMove{
+    0%{transform:translateY(0);}
+    100%{transform:translateY(-200px);}
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    padding:15px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(18px);
+}
+
+nav a{
+    text-decoration:none;
+    color:black;
+    padding:8px 15px;
+    border-radius:10px;
+}
+
+nav a:hover{
+    color:blue;
+    background:rgba(255,255,255,.45);
+}
+
+/* Contact Box */
+.content-box{
+    margin:60px auto;
+    max-width:750px;
+    padding:40px;
+    background:rgba(255,255,255,0.55);
+    border-radius:20px;
+    backdrop-filter:blur(14px);
+    text-align:center;
+}
+
+h1{
+    font-size:35px;
+    margin-bottom:25px;
+}
+
+/* Contact Items */
+.contact-item{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    margin:18px 0;
+    font-size:20px;
+}
+
+.contact-item img{
+    width:32px;
+    height:32px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="particles"></div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="education.html">Education</a>
+<a href="skills.html">Skills</a>
+<a href="activities.html">Activities</a>
+<a href="achievements.html">Achievements</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="content-box">
+<h1>Contact Me</h1>
+
+<!-- Email -->
+<div class="contact-item">
+    <img src="email.png" alt="Email Icon">
+    <span>sachikapase1904@gmail.com</span>
+</div>
+
+<!-- Phone -->
+<div class="contact-item">
+    <img src="phone.png" alt="Phone Icon">
+    <span>+91 83297 00287</span>
+</div>
+
+<!-- Instagram -->
+<div class="contact-item">
+    <img src="instagram.png" alt="Instagram Icon">
+    <span>@sachi_k_19</span>
+</div>
+
+<!-- Location -->
+<div class="contact-item">
+    <img src="location.png" alt="Location Icon">
+    <span>Kopargaon, Ahilyanagar, Maharashtra</span>
+</div>
+
+</div>
+
+</body>
+</html>

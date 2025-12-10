@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        color: black;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    /* SAME BACKGROUND AS MAIN PAGE */
+    .bg {
+        position: fixed;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+        background-size: 300% 300%;
+        animation: gradientShift 10s ease infinite;
+        z-index: -2;
+    }
+
+    .particles {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: radial-gradient(circle, rgba(255,255,255,0.3) 2px, transparent 2px);
+        background-size: 70px 70px;
+        opacity: 0.4;
+        animation: starMove 12s linear infinite;
+        z-index: -1;
+    }
+
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    @keyframes starMove {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-200px); }
+    }
+
+    /* NAVBAR */
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        padding: 15px 0;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(18px);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    nav a {
+        color: black;
+        text-decoration: none;
+        font-size: 17px;
+        padding: 8px 15px;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        background: rgba(255,255,255,0.4);
+        color: blue;
+    }
+
+    /* CONTENT AREA */
+    .edu-container {
+        max-width: 900px;
+        margin: 70px auto;
+        padding: 20px;
+        position: relative;
+        z-index: 5;
+    }
+
+    .edu-title {
+        text-align: center;
+        font-size: 42px;
+        font-weight: bold;
+        margin-bottom: 40px;
+        color: #1a1a1a;
+        text-transform: uppercase;
+    }
+
+    /* GLASS STYLE CARDS (same as main box) */
+    .edu-card {
+        background: rgba(255, 255, 255, 0.55);
+        backdrop-filter: blur(14px);
+        padding: 25px;
+        border-radius: 20px;
+        margin-bottom: 25px;
+        box-shadow: 0 0 15px rgba(255,255,255,0.5);
+        border-left: 6px solid #6aa0f8;
+        transition: 0.3s;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .edu-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .edu-card h2 {
+        margin: 0;
+        font-size: 28px;
+        color: #07077a;
+    }
+
+    .edu-card h3 {
+        margin: 10px 0 5px;
+        font-size: 20px;
+        color: #000;
+    }
+
+    .edu-card p {
+        margin: 0;
+        font-size: 16px;
+        color: #333;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+<div class="bg"></div>
+<div class="particles"></div>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="activities.html">Activities</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<!-- EDUCATION CONTENT -->
+<div class="edu-container">
+
+    <div class="edu-title">Education</div>
+
+    <!-- 10th -->
+    <div class="edu-card">
+        <h2>Class-10<sup>th</sup></h2>
+        <h3>School Name:- Dr.C.M. Mehta Kanya Vidya Mandir,Kopargaon</h3>
+        <p>Percentage: <b>95.20%</b></p>
+        <p>Year: 2023</p>
+        <p>Completed with strong academic performance and excellent foundation in core subjects.</p>
+    </div>
+
+    <!-- 12th -->
+    <div class="edu-card">
+        <h2>Class-12<sup>th</sup></h2>
+        <h3>College Name:- S.S.G.M. College,Kopargaon</h3>
+        <p>Percentage: <b>75%</b></p>
+        <p>Year: 2025</p>
+        <p>Specialized in Science with enhanced learning and practical knowledge.</p>
+    </div>
+
+    <!-- 1st Year -->
+    <div class="edu-card">
+        <h2>Class-First Year B.Tech</h2>
+        <h3>College Name:- Sanjivani College Of Engineering,Kopargaon</h3>
+        <p>Year: 2025-26</p>
+        <p>Currently pursuing 1<sup>st</sup> year in <b>Electrical Engineering</b> and building strong academic and project skills.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
